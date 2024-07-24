@@ -1,0 +1,169 @@
+:root {
+    --text: #e0e0e0; /* Light gray text */
+    --background: #121212; /* Dark gray for background */
+    --primary: #1f1f1f; /* Slightly lighter dark gray */
+    --secondary: #f1c40f; /* Yellow accents */
+    --accent: #e74c3c; /* Red accents for added drama */
+}
+
+.app {
+    min-height: 100vh;
+    display: grid;
+    background: var(--background); /* Dark background */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.weather {
+    max-width: 1000px; /* Increase width for better horizontal expansion */
+    width: 100%;
+    min-width: 300px; /* Ensure the box doesn't get too narrow */
+    padding: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+    background: rgba(33, 33, 33, 0.8); /* Slightly opaque dark gray background */
+    backdrop-filter: blur(8px); /* Apply blur effect to the background */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to define the component */
+    transition: background 0.5s ease; /* Smooth transition for background */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    width: 100%;
+    max-width: 400px; /* Restrict maximum width */
+    background: rgba(255, 255, 255, 0.1); /* Slightly opaque background */
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
+    margin-bottom: 20px; /* Space below the search bar */
+}
+
+.search-bar input {
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    padding-left: 15px;
+    color: var(--text); /* Light text color */
+    background: var(--primary); /* Dark gray background for input field */
+    font-size: 16px;
+    flex: 1;
+}
+
+.search-bar img {
+    width: 40px;
+    height: 40px; /* Ensure height matches width */
+    margin-left: 15px; /* Added space between input and icon */
+    border-radius: 50%;
+    background: var(--primary); /* Dark gray background for icon */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+    display: block; /* Ensure no blurring issue */
+}
+
+.search-bar img:hover {
+    background: var(--secondary); /* Yellow color on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.weather-icon {
+    width: 120px;
+    margin: 20px;
+}
+
+.temperature {
+    color: var(--text); /* Light text color for temperature */
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+}
+
+.location {
+    color: var(--text); /* Light text color for location */
+    font-size: 32px;
+    margin: 0;
+}
+
+.weather-data {
+    width: 100%;
+    margin-top: 30px;
+    color: var(--text); /* Light text color for weather data */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between columns */
+}
+
+.weather-data .col {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    flex: 1;
+    min-width: 140px; /* Minimum width for better spacing */
+    background: rgba(255, 255, 255, 0.1); /* Slightly opaque background */
+    border-radius: 8px;
+    padding: 10px; /* Padding for better spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
+}
+
+.weather-data .col span {
+    display: block;
+    font-size: 14px;
+    color: var(--secondary); /* Yellow color for labels */
+}
+
+.weather-data .col img {
+    width: 30px;
+    margin-top: 0;
+}
+
+.batman {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 300px;
+    background-color: #121010; /* Slightly lighter shade than the background */
+    clip-path: polygon(
+        50% 0%, 
+        58% 20%, 
+        72% 30%, 
+        78% 50%, 
+        68% 60%, 
+        70% 80%, 
+        50% 100%, 
+        30% 80%, 
+        32% 60%, 
+        22% 50%, 
+        28% 30%, 
+        42% 20%
+    );
+}
+
+/* Additional styling for other Batman details */
+.batman::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 60px;
+    background-color: #312525; /* Slightly lighter shade than the background */
+    clip-path: polygon(
+        50% 0%, 
+        70% 20%, 
+        60% 40%, 
+        70% 60%, 
+        50% 80%, 
+        30% 60%, 
+        40% 40%, 
+        30% 20%
+    );
+}
